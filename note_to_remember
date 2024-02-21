@@ -1,0 +1,10 @@
+Note to remember:
+
+from server import app, db, User
+app.app_context().push()
+db.create_all()
+user_3 = User(username='kakao',email='kakao@gmail.com',password='kakaopassword123')
+db.session.add(user_3)
+db.session.commit()
+User.query.all()
+[User ('kakao', 'kakao@gmail.com','default.jpg' ]
